@@ -8,6 +8,9 @@ export const authOptions: NextAuthOptions = {
       credentials: {},
       async authorize(credentials: any, req): Promise<any> {
         try {
+
+          console.log(`${process.env.API_URL}/api/auth/login`);
+          
           const res = await fetch(`${process.env.API_URL}/api/auth/login`, {
             method: "POST",
             headers: {
@@ -24,7 +27,7 @@ export const authOptions: NextAuthOptions = {
           if (res.ok && result.status === "success") {
             const user = result.data; // Assuming result.data matches the AuthUser interface
             return user; // Return the user object
-          }
+          }         
 
           throw new Error("Authentication error");
         } catch (error: any) {
