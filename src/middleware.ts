@@ -1,46 +1,23 @@
-import { getToken } from "next-auth/jwt";
-import { withAuth } from "next-auth/middleware";
-import { NextResponse } from "next/server";
+// middleware.ts
+import { NextResponse, NextRequest } from 'next/server';
+import { getToken } from 'next-auth/jwt'; // Import token retrieval from next-auth
 
-export default withAuth(
-  async function middleware(request) {
-    const authenticatedData = await getToken({
-      req: request,
-      secret: process.env.NEXTAUTH_SECRET,
-    });
+export async function middleware(req: NextRequest): Promise<NextResponse> {
+  const token = await getToken({ req });
 
-    console.log(authenticatedData);
-    
+  // Define the guest routes that should not be accessible for logged-in users
+  const guestRoutes: string[] = ['/login', '/register'];
 
-    const isGuestRoute = guestRoutes.some((route) =>
-      request.nextUrl.pathname.startsWith(route)
-    );
-
-    if (!authenticatedData && !isGuestRoute) {
-      const redirectUrl = new URL("/login", request.url);
-      const baseURL = process.env.NEXTAUTH_URL;
-      const pathname = request.nextUrl.pathname;
-      const callbackUrl = new URL(pathname, baseURL);
-      redirectUrl.searchParams.set("callbackUrl", callbackUrl.href);
-      return NextResponse.redirect(redirectUrl);
-    }
-
-    if (authenticatedData) {
-      if (isGuestRoute) {
-        return NextResponse.redirect(new URL("/", request.url));
-      }
-    }
-  },
-  {
-    callbacks: {
-      async authorized(token) {
-        return true;
-      },
-    },
+  // Check if the user is trying to access a guest route while logged in
+  if (token && guestRoutes.includes(req.nextUrl.pathname)) {
+    // Redirect to the homepage or another route
+    return NextResponse.redirect(new URL('/', req.url));
   }
-);
 
-const guestRoutes = [
-  "/login",
-  "/register",
-];
+  return NextResponse.next();
+}
+
+// Apply middleware to guest routes
+export const config = {
+  matcher: ['/login', '/register'], // Define which routes the middleware should apply to
+};
