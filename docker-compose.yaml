@@ -1,0 +1,15 @@
+services:
+  chat_frontend:
+    container_name: chat_frontend
+    build:
+      context: .
+    env_file:
+      - .env
+    networks:
+      - chat_frontend_network
+    ports:
+      - 3000:3000
+
+networks:
+  chat_frontend_network:
+    driver: bridge
