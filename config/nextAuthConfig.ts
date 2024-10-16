@@ -7,10 +7,7 @@ export const authOptions: NextAuthOptions = {
       name: "Credentials",
       credentials: {},
       async authorize(credentials: any, req): Promise<any> {
-        try {
-
-          console.log(`${process.env.API_URL}/api/auth/login`);
-          
+        try {          
           const res = await fetch(`${process.env.API_URL}/api/auth/login`, {
             method: "POST",
             headers: {
