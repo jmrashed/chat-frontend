@@ -9,6 +9,9 @@ export default withAuth(
       secret: process.env.NEXTAUTH_SECRET,
     });
 
+    console.log(authenticatedData);
+    
+
     const isGuestRoute = guestRoutes.some((route) =>
       request.nextUrl.pathname.startsWith(route)
     );
