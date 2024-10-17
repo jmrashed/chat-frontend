@@ -8,16 +8,23 @@ export async function middleware(req: NextRequest): Promise<NextResponse> {
   // Define the guest routes that should not be accessible for logged-in users
   const guestRoutes: string[] = ['/login', '/register'];
 
-  // Check if the user is trying to access a guest route while logged in
-  if (token && guestRoutes.includes(req.nextUrl.pathname)) {
-    // Redirect to the homepage or another route
-    return NextResponse.redirect(new URL('/', req.url));
+  if (!token) {
+    // User is not logged in
+    if (!guestRoutes.includes(req.nextUrl.pathname)) {
+      return NextResponse.redirect(new URL('/login', req.url));
+    }
+  } else {
+    // User is logged in
+    if (guestRoutes.includes(req.nextUrl.pathname)) {
+      // If trying to access a guest route while logged in, redirect to home
+      return NextResponse.redirect(new URL('/', req.url));
+    }
   }
 
-  return NextResponse.next();
+  return NextResponse.next(); // Proceed with the request for all other cases
 }
 
-// Apply middleware to guest routes
+// Apply middleware to all routes
 export const config = {
-  matcher: ['/login', '/register'], // Define which routes the middleware should apply to
+  matcher: ['/', '/login', '/register', '/chat', '/chat/:path*'], // Add any other routes that require protection
 };
