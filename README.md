@@ -60,3 +60,23 @@ To deploy the client-side of this chat application, you can use the [Vercel Plat
 
 For detailed instructions, refer to the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
  
+
+
+ ## Screenshots
+
+Here are some screenshots of the project:
+
+### Screenshot 1
+![Screenshot 1](docs/1.png)
+
+### Screenshot 2
+![Screenshot 2](docs/2.png)
+
+### Screenshot 3
+![Screenshot 3](docs/3.png)
+
+### Screenshot 4
+![Screenshot 4](docs/4.png)
+
+### Screenshot 5
+![Screenshot 5](docs/5.png)
