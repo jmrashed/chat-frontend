@@ -1,17 +1,54 @@
 {
-  "name": "chat-frontend",
-  "version": "0.1.0",
-  "description": "A real-time chat application built with Next.js and Socket.io",
-  "keywords": ["nextjs", "chat", "real-time", "socket.io", "react", "typescript"],
-  "author": "Your Name <your.email@example.com>",
+  "name": "@jmrashed/chat-frontend",
+  "version": "1.0.0",
+  "description": "Modern real-time chat application frontend built with Next.js 14, React 18, TypeScript, Socket.IO, and Tailwind CSS. Features responsive design, real-time messaging, file sharing, and optimized performance.",
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "chat-application",
+    "real-time",
+    "socket.io",
+    "tailwindcss",
+    "messaging",
+    "websocket",
+    "responsive-design",
+    "file-sharing",
+    "modern-ui",
+    "pwa",
+    "vercel",
+    "frontend",
+    "spa",
+    "ssr",
+    "performance",
+    "accessibility",
+    "mobile-first"
+  ],
+  "author": {
+    "name": "Md Rasheduzzaman",
+    "email": "jmrashed@gmail.com",
+    "url": "https://jmrashed.github.io"
+  },
+  "contributors": [
+    {
+      "name": "Md Rasheduzzaman",
+      "email": "jmrashed@gmail.com",
+      "url": "https://github.com/jmrashed"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jmrashed/chat-frontend.git"
+    "url": "git+https://github.com/jmrashed/chat-frontend.git"
   },
   "homepage": "https://github.com/jmrashed/chat-frontend#readme",
   "bugs": {
-    "url": "https://github.com/jmrashed/chat-frontend/issues"
+    "url": "https://github.com/jmrashed/chat-frontend/issues",
+    "email": "jmrashed@gmail.com"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/jmrashed"
   },
   "scripts": {
     "dev": "next dev",
@@ -56,5 +93,25 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
