@@ -7,28 +7,37 @@ export const authOptions: NextAuthOptions = {
       name: "Credentials",
       credentials: {},
       async authorize(credentials: any, req): Promise<any> {
-        try {          
+        try {
+          console.log('NextAuth authorize called with:', { email: credentials?.email });
+          
           const res = await fetch(`${process.env.API_URL}/api/auth/login`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              email: credentials?.email, // Optional chaining to avoid undefined error
+              email: credentials?.email,
               password: credentials?.password,
             }),
           });
+          
           const result = await res.json();
+          console.log('Backend response:', { status: res.status, result });
 
-          // Check if the response indicates success and contains user data
           if (res.ok && result.status === "success") {
-            const user = result.data; // Assuming result.data matches the AuthUser interface
-            return user; // Return the user object
-          }         
+            return {
+              id: result.data.id,
+              email: result.data.email,
+              username: result.data.username,
+              accessToken: result.data.accessToken
+            };
+          }
 
-          throw new Error("Authentication error");
+          console.log('Authentication failed:', result);
+          return null;
         } catch (error: any) {
-          throw new Error(error.message);
+          console.error('NextAuth authorize error:', error);
+          return null;
         }
       },
     }),

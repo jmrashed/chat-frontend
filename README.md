@@ -15,7 +15,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/jmrashed/chat-frontend?style=social)](https://github.com/jmrashed/chat-frontend/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/jmrashed/chat-frontend?style=social)](https://github.com/jmrashed/chat-frontend/network/members)
 
-This is the client-side of a real-time chat application built using [Next.js](https://nextjs.org), bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). The project is designed to enable seamless and efficient communication with real-time updates.
+This is the client-side of a professional real-time chat application built using [Next.js](https://nextjs.org) 14 with TypeScript. The project features a modern, responsive interface with comprehensive messaging capabilities including reactions, threading, mentions, search, and real-time status indicators.
 
 ## Related Repositories
 
@@ -65,9 +65,34 @@ You can start editing the UI by modifying `app/page.tsx`. The page will automati
 
 ## Features
 
-- **Real-Time Communication**: The chat application allows users to communicate in real time.
-- **Optimized Performance**: Leveraging Next.js features, the application is optimized for performance and responsiveness.
-- **Custom Fonts**: The application uses the [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) utility to optimize and load the [Geist](https://vercel.com/font) font family for a modern and clean UI.
+### Professional Messaging Interface
+- **Real-Time Communication**: Instant messaging with Socket.IO integration
+- **Message Reactions**: React to messages with emoji reactions
+- **Message Editing/Deletion**: Edit and delete messages with visual indicators
+- **Message Threads**: Reply to specific messages with threaded conversations
+- **@Mentions**: Mention users with auto-complete and notifications
+- **Message Status**: Visual sent, delivered, and read indicators
+- **Typing Indicators**: Animated typing indicators with user avatars
+- **Message Search**: Advanced search with filtering and highlighting
+- **Pinned Messages**: Pin important messages with dedicated view
+- **Starred Messages**: Personal message bookmarking system
+
+### Modern UI/UX
+- **Professional Design**: Clean, modern interface with glass-morphism effects
+- **Dark/Light Themes**: Automatic theme switching with system preference
+- **Responsive Design**: Mobile-first approach with optimized layouts
+- **Smooth Animations**: Professional transitions and micro-interactions
+- **Message Grouping**: Intelligent message grouping by sender
+- **Avatar System**: Professional avatar display with online status
+- **Custom Components**: Reusable UI components with Tailwind CSS
+
+### Performance & Accessibility
+- **Optimized Performance**: Next.js 14 with App Router and server components
+- **Custom Fonts**: Geist font family with optimal loading
+- **TypeScript**: Full type safety and developer experience
+- **Component Architecture**: Modular, maintainable component structure
+- **State Management**: Efficient state handling with React hooks
+- **Keyboard Navigation**: Full keyboard accessibility support
 
 ## Learn More
 
