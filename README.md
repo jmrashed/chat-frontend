@@ -1,5 +1,10 @@
 # Real-Time Chat Application (Client)
 
+[![CI](https://github.com/jmrashed/chat-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/jmrashed/chat-frontend/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2.15-black)](https://nextjs.org/)
+
 This is the client-side of a real-time chat application built using [Next.js](https://nextjs.org), bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). The project is designed to enable seamless and efficient communication with real-time updates.
 
 ## Getting Started
@@ -59,6 +64,46 @@ You can also check out the [Next.js GitHub repository](https://github.com/vercel
 To deploy the client-side of this chat application, you can use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), which is optimized for Next.js applications.
 
 For detailed instructions, refer to the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## Testing
+
+Run the test suite:
+
+```bash
+npm test
+# or
+npm run test:watch  # Watch mode
+npm run test:coverage  # With coverage
+```
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Code of Conduct
+
+This project adheres to our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+
+## Security
+
+For security concerns, please review our [Security Policy](SECURITY.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+If you have any questions or need help, please:
+- Check the [documentation](docs/)
+- Open an [issue](https://github.com/jmrashed/chat-frontend/issues)
+- Join our discussions
  
 
 
@@ -80,3 +125,23 @@ Here are some screenshots of the project:
 
 ### Screenshot 5
 ![Screenshot 5](docs/5.png)
+
+
+
+## 👨‍💻 Author
+
+**Md Rasheduzzaman**  
+Full-Stack Software Engineer & Technical Project Manager  
+
+Building scalable, secure & AI-powered SaaS platforms across ERP, HRMS, CRM, LMS, and E-commerce domains.  
+Over 10 years of experience leading full-stack teams, cloud infrastructure, and enterprise-grade software delivery.
+
+**🌐 Portfolio:** [jmrashed.github.io](https://jmrashed.github.io/)  
+**✉️ Email:** [jmrashed@gmail.com](mailto:jmrashed@gmail.com)  
+**💼 LinkedIn:** [linkedin.com/in/jmrashed](https://www.linkedin.com/in/jmrashed/)  
+**📝 Blog:** [medium.com/@jmrashed](https://medium.com/@jmrashed)  
+**💻 GitHub:** [github.com/jmrashed](https://github.com/jmrashed)
+
+---
+
+> *“Need a Reliable Software Partner? I build scalable, secure & modern solutions for startups and enterprises.”*
