@@ -4,8 +4,27 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-14.2.15-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18.3.1-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-blue)](https://www.typescriptlang.org/)
+[![Socket.IO Client](https://img.shields.io/badge/Socket.IO--Client-4.8.1-green)](https://socket.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.1-38B2AC)](https://tailwindcss.com/)
+[![ESLint](https://img.shields.io/badge/ESLint-8.57.1-4B32C3)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-3.3.3-F7B93E)](https://prettier.io/)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black)](https://vercel.com/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![GitHub Stars](https://img.shields.io/github/stars/jmrashed/chat-frontend?style=social)](https://github.com/jmrashed/chat-frontend/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/jmrashed/chat-frontend?style=social)](https://github.com/jmrashed/chat-frontend/network/members)
 
 This is the client-side of a real-time chat application built using [Next.js](https://nextjs.org), bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). The project is designed to enable seamless and efficient communication with real-time updates.
+
+## Related Repositories
+
+**Backend Server**: For the complete chat application experience, you'll also need the backend server. Check out the [Chat Backend Repository](https://github.com/jmrashed/chat-backend) which provides:
+- Real-time Socket.IO communication
+- User authentication with JWT
+- File sharing capabilities
+- MongoDB integration
+- RESTful API endpoints
 
 ## Getting Started
 
